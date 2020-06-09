@@ -1,6 +1,6 @@
 import os
 import sys
-from e3.os.platform import get_rlimit
+from e3.os.process import get_rlimit
 import subprocess
 
 
