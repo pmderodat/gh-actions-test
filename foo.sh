@@ -1,11 +1,25 @@
 #!/usr/bin/env bash
 
-echo ==== file ====
+echo ==== file: rlimit ====
 file 'C:\\hostedtoolcache\\windows\\Python\\3.8.3\\x64\\lib\\site-packages\\e3\\os\\data\\rlimit-x86-windows'
+
+echo ==== file: ls ====
+which ls
+file $(which ls)
+echo ">>>" $?
+
+echo ==== file: python ====
+which python
+file $(which python)
 echo ">>>" $?
 
 echo ==== rlimit: no args ====
 'C:\\hostedtoolcache\\windows\\Python\\3.8.3\\x64\\lib\\site-packages\\e3\\os\\data\\rlimit-x86-windows'
+echo ">>>" $?
+
+echo ==== rlimit: run itself ====
+'C:\\hostedtoolcache\\windows\\Python\\3.8.3\\x64\\lib\\site-packages\\e3\\os\\data\\rlimit-x86-windows' \
+    'C:\\hostedtoolcache\\windows\\Python\\3.8.3\\x64\\lib\\site-packages\\e3\\os\\data\\rlimit-x86-windows'
 echo ">>>" $?
 
 echo ==== rlimit: ls ====
