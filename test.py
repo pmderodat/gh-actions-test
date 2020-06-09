@@ -10,4 +10,7 @@ rlimit = get_rlimit()
 argv = [rlimit, "5", sys.executable, "subp.py"]
 print("Argv:", argv)
 print("Cwd:", cwd)
+sys.stdout.flush()
+sys.stderr.flush()
+
 subprocess.run(argv, cwd=cwd)
